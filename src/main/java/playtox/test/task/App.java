@@ -2,23 +2,45 @@ package playtox.test.task;
 
 import playtox.test.task.entities.Account;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class App {
+    private static final Lock lock = new ReentrantLock();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+        long startTime = System.currentTimeMillis();
+
         Runner runner = new Runner();
         runner.run();
 
+//        Thread thread1 = new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                System.out.println("Thread 1 " + lock.tryLock());
+//                lock.unlock();
+//                lock.unlock();
+//
+//            }
+//        });
+//        Thread thread2 = new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                System.out.println("Thread 2 " + lock.tryLock());
+//            }
+//        });
+//
+//        thread1.start();
+//        thread2.start();
+//
+//        thread1.join();
+//        thread2.join();
+
+
+
         List<Thread> threadList = new ArrayList<>();
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 2; i++) {
             threadList.add(new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -27,7 +49,7 @@ public class App {
             }));
         }
 
-        long startTime = System.currentTimeMillis();
+
 
         for (Thread thread : threadList) {
             thread.start();
@@ -51,13 +73,13 @@ public class App {
 class Runner {
 
     private int counter = 0;
-    private Lock counterLock = new ReentrantLock();
+    private final Lock counterLock = new ReentrantLock();
 
     private Integer transactionsCounter = 0;
-    private Lock transactionsCounterLock = new ReentrantLock();
+    private final Lock transactionsCounterLock = new ReentrantLock();
 
     private List<Account> accountList = new ArrayList<>();
-    private static final List<Lock> lockList = new ArrayList<>();
+    private static List<Lock> lockList = new ArrayList<>();
     private static final int ACCOUNTS_LIMIT = 10;
 
     private static final Random random = new Random();
@@ -85,45 +107,54 @@ class Runner {
         transactionsCounterLock.unlock();
     }
 
-    public int[] takeTwoAccounts() {
 
-        int[] accountIndexes = new int[2];
 
-        for (int accountIndexesCounter = 0; accountIndexesCounter < 2; incrementCounter()) {
+    public void doTransactions() {
+        while (transactionsCounter < 130) {
+            doTransaction();
+        }
+    }
 
+    public synchronized void doTransaction() {
+        // получаем два индекса только что залоченных локов
+        List<Integer> indexes = takeTwoAccounts();
+
+        try {
+            // производим перевод средств между аккаунтами под полученными индексами
+            Account.transfer(accountList.get(indexes.get(0)), accountList.get(indexes.get(1)), random.nextInt(100));
+
+            // увеличиваем счетчик тразакций
+            incrementTransactionsCounterLock();
+
+        } finally {
+            // особобождаем локи
+            for (Integer i : indexes) {
+                lockList.get(i).unlock();
+            }
+        }
+    }
+
+    public List<Integer> takeTwoAccounts() {
+
+        Set<Integer> accountIndexes = new LinkedHashSet<>();
+
+        while (accountIndexes.size() < 2) {
             // Если получилось залочить
             if (lockList.get(counter).tryLock()) {
                 // забираем индекс залоченного лока
-                accountIndexes[accountIndexesCounter++] = counter;
+                accountIndexes.add(counter);
+                incrementCounter();
             }
         }
 
-        return accountIndexes;
-    }
-
-    public void doTransactions() {
-        while (transactionsCounter < 30) {
-
-            // получаем два индекса только что залоченных локов
-            int[] indexes = takeTwoAccounts();
-
-                // производим перевод средств между аккаунтами под полученными индексами
-                Account.transfer(accountList.get(indexes[0]), accountList.get(indexes[1]), random.nextInt(100));
-                // увеличиваем счетчик тразакций
-                incrementTransactionsCounterLock();
-                // особобождаем локи
-                for (int i : indexes) {
-                    lockList.get(i).unlock();
-                }
-
-        }
+        return new ArrayList<>(accountIndexes);
     }
 
     public void finished() {
         int total = 0;
 
         for (Account account : accountList) {
-            System.out.print(account);
+            System.out.print(account + "\n");
             total += account.getMoney();
         }
 
