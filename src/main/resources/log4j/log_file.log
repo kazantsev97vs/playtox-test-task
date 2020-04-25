@@ -1,0 +1,279 @@
+2020-04-25 12:45:02 INFO  App:23 - Заданные параметры:
+Количество транзакций - 30
+Количество аккаунтов - 4
+Количество потоков - 2
+2020-04-25 12:45:02 INFO  TransactionsExecutor:39 - Получен список аккаунтов, с которыми нужно провести транзакции:
+2020-04-25 12:45:02 INFO  TransactionsExecutor:40 - [Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=10000), Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=10000), Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=10000), Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=10000)]
+
+2020-04-25 12:45:02 INFO  App:68 - Thread-0 has been started
+2020-04-25 12:45:02 INFO  App:68 - Thread-1 has been started
+2020-04-25 12:45:02 INFO  TransactionsExecutor:50 - Поток Thread-0 начинает выполнение 30 транзакций..
+2020-04-25 12:45:02 INFO  TransactionsExecutor:50 - Поток Thread-1 начинает выполнение 30 транзакций..
+2020-04-25 12:45:02 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №1
+2020-04-25 12:45:02 INFO  Account:41 - Выполняю перевод средств с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=10000) на Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=10000) на сумму в размере 2687
+2020-04-25 12:45:02 INFO  Account:30 - Снимаю средства на сумму 2687 со счета Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=10000)
+2020-04-25 12:45:02 INFO  Account:25 - Пополняю баланс счета Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=10000) на сумму 2687
+2020-04-25 12:45:02 INFO  Account:44 - Перевод между счетами Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=7313) и Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=12687) прошел успешно!
+
+2020-04-25 12:45:02 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1861 ms..
+
+2020-04-25 12:45:02 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №2
+2020-04-25 12:45:02 INFO  Account:41 - Выполняю перевод средств с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=10000) на Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=10000) на сумму в размере 4235
+2020-04-25 12:45:02 INFO  Account:30 - Снимаю средства на сумму 4235 со счета Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=10000)
+2020-04-25 12:45:02 INFO  Account:25 - Пополняю баланс счета Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=10000) на сумму 4235
+2020-04-25 12:45:02 INFO  Account:44 - Перевод между счетами Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=5765) и Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=14235) прошел успешно!
+
+2020-04-25 12:45:02 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1151 ms..
+
+2020-04-25 12:45:04 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:04 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №3
+2020-04-25 12:45:04 INFO  Account:41 - Выполняю перевод средств с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=7313) на Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=12687) на сумму в размере 492
+2020-04-25 12:45:04 INFO  Account:30 - Снимаю средства на сумму 492 со счета Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=7313)
+2020-04-25 12:45:04 INFO  Account:25 - Пополняю баланс счета Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=12687) на сумму 492
+2020-04-25 12:45:04 INFO  Account:44 - Перевод между счетами Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=6821) и Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=13179) прошел успешно!
+
+2020-04-25 12:45:04 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1130 ms..
+
+2020-04-25 12:45:04 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:04 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №4
+2020-04-25 12:45:04 INFO  Account:41 - Выполняю перевод средств с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=5765) на Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=14235) на сумму в размере 2649
+2020-04-25 12:45:04 INFO  Account:30 - Снимаю средства на сумму 2649 со счета Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=5765)
+2020-04-25 12:45:04 INFO  Account:25 - Пополняю баланс счета Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=14235) на сумму 2649
+2020-04-25 12:45:04 INFO  Account:44 - Перевод между счетами Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=3116) и Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=16884) прошел успешно!
+
+2020-04-25 12:45:04 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1698 ms..
+
+2020-04-25 12:45:05 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:05 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №5
+2020-04-25 12:45:05 INFO  Account:41 - Выполняю перевод средств с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=6821) на Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=13179) на сумму в размере 4874
+2020-04-25 12:45:05 INFO  Account:30 - Снимаю средства на сумму 4874 со счета Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=6821)
+2020-04-25 12:45:05 INFO  Account:25 - Пополняю баланс счета Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=13179) на сумму 4874
+2020-04-25 12:45:05 INFO  Account:44 - Перевод между счетами Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947) и Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=18053) прошел успешно!
+
+2020-04-25 12:45:05 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1959 ms..
+
+2020-04-25 12:45:06 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:06 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №6
+2020-04-25 12:45:06 INFO  Account:41 - Выполняю перевод средств с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=3116) на Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=16884) на сумму в размере 19
+2020-04-25 12:45:06 INFO  Account:30 - Снимаю средства на сумму 19 со счета Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=3116)
+2020-04-25 12:45:06 INFO  Account:25 - Пополняю баланс счета Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=16884) на сумму 19
+2020-04-25 12:45:06 INFO  Account:44 - Перевод между счетами Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=3097) и Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=16903) прошел успешно!
+
+2020-04-25 12:45:06 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1452 ms..
+
+2020-04-25 12:45:07 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:07 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №7
+2020-04-25 12:45:07 INFO  Account:37 - Произвести списаниия средств в количестве 3463 с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947) - не удалось
+2020-04-25 12:45:07 INFO  TransactionsExecutor:93 - Транзакция №7 не удалась..
+
+2020-04-25 12:45:07 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1255 ms..
+
+2020-04-25 12:45:07 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:07 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №8
+2020-04-25 12:45:07 INFO  Account:37 - Произвести списаниия средств в количестве 3151 с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=3097) - не удалось
+2020-04-25 12:45:07 INFO  TransactionsExecutor:93 - Транзакция №8 не удалась..
+
+2020-04-25 12:45:07 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1597 ms..
+
+2020-04-25 12:45:08 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:08 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №9
+2020-04-25 12:45:08 INFO  Account:37 - Произвести списаниия средств в количестве 4091 с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947) - не удалось
+2020-04-25 12:45:08 INFO  TransactionsExecutor:93 - Транзакция №9 не удалась..
+
+2020-04-25 12:45:08 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1556 ms..
+
+2020-04-25 12:45:09 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:09 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №10
+2020-04-25 12:45:09 INFO  Account:41 - Выполняю перевод средств с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=3097) на Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=16903) на сумму в размере 2712
+2020-04-25 12:45:09 INFO  Account:30 - Снимаю средства на сумму 2712 со счета Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=3097)
+2020-04-25 12:45:09 INFO  Account:25 - Пополняю баланс счета Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=16903) на сумму 2712
+2020-04-25 12:45:09 INFO  Account:44 - Перевод между счетами Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=385) и Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=19615) прошел успешно!
+
+2020-04-25 12:45:09 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1055 ms..
+
+2020-04-25 12:45:10 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:10 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №11
+2020-04-25 12:45:10 INFO  Account:37 - Произвести списаниия средств в количестве 2010 с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947) - не удалось
+2020-04-25 12:45:10 INFO  TransactionsExecutor:93 - Транзакция №11 не удалась..
+
+2020-04-25 12:45:10 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1536 ms..
+
+2020-04-25 12:45:10 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:10 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №12
+2020-04-25 12:45:10 INFO  Account:41 - Выполняю перевод средств с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=385) на Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=19615) на сумму в размере 229
+2020-04-25 12:45:10 INFO  Account:30 - Снимаю средства на сумму 229 со счета Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=385)
+2020-04-25 12:45:10 INFO  Account:25 - Пополняю баланс счета Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=19615) на сумму 229
+2020-04-25 12:45:10 INFO  Account:44 - Перевод между счетами Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=156) и Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=19844) прошел успешно!
+
+2020-04-25 12:45:10 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1205 ms..
+
+2020-04-25 12:45:11 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:11 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №13
+2020-04-25 12:45:11 INFO  Account:37 - Произвести списаниия средств в количестве 2752 с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947) - не удалось
+2020-04-25 12:45:11 INFO  TransactionsExecutor:93 - Транзакция №13 не удалась..
+
+2020-04-25 12:45:11 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1565 ms..
+
+2020-04-25 12:45:11 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:11 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №14
+2020-04-25 12:45:11 INFO  Account:37 - Произвести списаниия средств в количестве 1276 с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=156) - не удалось
+2020-04-25 12:45:11 INFO  TransactionsExecutor:93 - Транзакция №14 не удалась..
+
+2020-04-25 12:45:11 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1617 ms..
+
+2020-04-25 12:45:13 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:13 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №15
+2020-04-25 12:45:13 INFO  Account:37 - Произвести списаниия средств в количестве 3606 с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947) - не удалось
+2020-04-25 12:45:13 INFO  TransactionsExecutor:93 - Транзакция №15 не удалась..
+
+2020-04-25 12:45:13 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1756 ms..
+
+2020-04-25 12:45:13 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:13 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №16
+2020-04-25 12:45:13 INFO  Account:37 - Произвести списаниия средств в количестве 1876 с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=156) - не удалось
+2020-04-25 12:45:13 INFO  TransactionsExecutor:93 - Транзакция №16 не удалась..
+
+2020-04-25 12:45:13 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1068 ms..
+
+2020-04-25 12:45:14 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:14 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №17
+2020-04-25 12:45:14 INFO  Account:37 - Произвести списаниия средств в количестве 4803 с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947) - не удалось
+2020-04-25 12:45:14 INFO  TransactionsExecutor:93 - Транзакция №17 не удалась..
+
+2020-04-25 12:45:14 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1633 ms..
+
+2020-04-25 12:45:14 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:14 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №18
+2020-04-25 12:45:14 INFO  Account:37 - Произвести списаниия средств в количестве 4410 с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=156) - не удалось
+2020-04-25 12:45:14 INFO  TransactionsExecutor:93 - Транзакция №18 не удалась..
+
+2020-04-25 12:45:14 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1546 ms..
+
+2020-04-25 12:45:16 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:16 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №19
+2020-04-25 12:45:16 INFO  Account:37 - Произвести списаниия средств в количестве 3727 с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947) - не удалось
+2020-04-25 12:45:16 INFO  TransactionsExecutor:93 - Транзакция №19 не удалась..
+
+2020-04-25 12:45:16 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1846 ms..
+
+2020-04-25 12:45:16 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:16 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №20
+2020-04-25 12:45:16 INFO  Account:37 - Произвести списаниия средств в количестве 2075 с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=156) - не удалось
+2020-04-25 12:45:16 INFO  TransactionsExecutor:93 - Транзакция №20 не удалась..
+
+2020-04-25 12:45:16 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1897 ms..
+
+2020-04-25 12:45:18 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:18 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №21
+2020-04-25 12:45:18 INFO  Account:37 - Произвести списаниия средств в количестве 2625 с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947) - не удалось
+2020-04-25 12:45:18 INFO  TransactionsExecutor:93 - Транзакция №21 не удалась..
+
+2020-04-25 12:45:18 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1305 ms..
+
+2020-04-25 12:45:18 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:18 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №22
+2020-04-25 12:45:18 INFO  Account:37 - Произвести списаниия средств в количестве 3753 с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=156) - не удалось
+2020-04-25 12:45:18 INFO  TransactionsExecutor:93 - Транзакция №22 не удалась..
+
+2020-04-25 12:45:18 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1141 ms..
+
+2020-04-25 12:45:19 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:19 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №23
+2020-04-25 12:45:19 INFO  Account:37 - Произвести списаниия средств в количестве 1984 с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947) - не удалось
+2020-04-25 12:45:19 INFO  TransactionsExecutor:93 - Транзакция №23 не удалась..
+
+2020-04-25 12:45:19 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1085 ms..
+
+2020-04-25 12:45:19 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:19 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №24
+2020-04-25 12:45:19 INFO  Account:37 - Произвести списаниия средств в количестве 4761 с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=156) - не удалось
+2020-04-25 12:45:19 INFO  TransactionsExecutor:93 - Транзакция №24 не удалась..
+
+2020-04-25 12:45:19 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1595 ms..
+
+2020-04-25 12:45:20 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:20 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №25
+2020-04-25 12:45:20 INFO  Account:37 - Произвести списаниия средств в количестве 3894 с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947) - не удалось
+2020-04-25 12:45:20 INFO  TransactionsExecutor:93 - Транзакция №25 не удалась..
+
+2020-04-25 12:45:20 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1454 ms..
+
+2020-04-25 12:45:21 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:21 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №26
+2020-04-25 12:45:21 INFO  Account:37 - Произвести списаниия средств в количестве 656 с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=156) - не удалось
+2020-04-25 12:45:21 INFO  TransactionsExecutor:93 - Транзакция №26 не удалась..
+
+2020-04-25 12:45:21 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1466 ms..
+
+2020-04-25 12:45:21 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:21 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №27
+2020-04-25 12:45:21 INFO  Account:37 - Произвести списаниия средств в количестве 3872 с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947) - не удалось
+2020-04-25 12:45:21 INFO  TransactionsExecutor:93 - Транзакция №27 не удалась..
+
+2020-04-25 12:45:21 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1706 ms..
+
+2020-04-25 12:45:22 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:22 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №28
+2020-04-25 12:45:22 INFO  Account:37 - Произвести списаниия средств в количестве 1462 с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=156) - не удалось
+2020-04-25 12:45:22 INFO  TransactionsExecutor:93 - Транзакция №28 не удалась..
+
+2020-04-25 12:45:22 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1489 ms..
+
+2020-04-25 12:45:23 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:23 INFO  TransactionsExecutor:83 - Поток Thread-0 начинает выполнение транзакции №29
+2020-04-25 12:45:23 INFO  Account:41 - Выполняю перевод средств с Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947) на Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=18053) на сумму в размере 58
+2020-04-25 12:45:23 INFO  Account:30 - Снимаю средства на сумму 58 со счета Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1947)
+2020-04-25 12:45:23 INFO  Account:25 - Пополняю баланс счета Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=18053) на сумму 58
+2020-04-25 12:45:23 INFO  Account:44 - Перевод между счетами Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1889) и Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=18111) прошел успешно!
+
+2020-04-25 12:45:23 INFO  TransactionsExecutor:56 - Поток Thread-0 засыпает на время 1100 ms..
+
+2020-04-25 12:45:24 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:24 INFO  TransactionsExecutor:83 - Поток Thread-1 начинает выполнение транзакции №30
+2020-04-25 12:45:24 INFO  Account:37 - Произвести списаниия средств в количестве 4731 с Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=156) - не удалось
+2020-04-25 12:45:24 INFO  TransactionsExecutor:93 - Транзакция №30 не удалась..
+
+2020-04-25 12:45:24 INFO  TransactionsExecutor:56 - Поток Thread-1 засыпает на время 1768 ms..
+
+2020-04-25 12:45:24 INFO  TransactionsExecutor:58 - Поток Thread-0 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:24 INFO  TransactionsExecutor:63 - Поток Thread-0 выполнение транзакций закончил
+2020-04-25 12:45:25 INFO  TransactionsExecutor:58 - Поток Thread-1 проснулся и продолжает выполнение транзакций..
+
+2020-04-25 12:45:25 INFO  TransactionsExecutor:63 - Поток Thread-1 выполнение транзакций закончил
+2020-04-25 12:45:25 INFO  TransactionsExecutor:142 - Вывод результатов:
+
+2020-04-25 12:45:25 INFO  TransactionsExecutor:144 - Account(id=YKDBkcanidJfnHXatjTBDQycgTmFvjawKmkd, money=1889)
+2020-04-25 12:45:25 INFO  TransactionsExecutor:144 - Account(id=BpDkEBAPiPThultMeiJoQRxYZzumdEVHSIkGHXftEPCKRatgFkgwQSiOEOjPZaPKzvdeZNfZbwFhG, money=18111)
+2020-04-25 12:45:25 INFO  TransactionsExecutor:144 - Account(id=UhEhekNpKPhJTbDXaCxngQkZvHVeKjNTMkudqxaKY, money=156)
+2020-04-25 12:45:25 INFO  TransactionsExecutor:144 - Account(id=hEdSJaSLXhhAxhlIjornxGsTthzMUKALVFyXLJ, money=19844)
+2020-04-25 12:45:25 INFO  TransactionsExecutor:148 - Total money is 40000
+2020-04-25 12:45:25 INFO  App:53 - Время выполнения программы: 22849 ms
